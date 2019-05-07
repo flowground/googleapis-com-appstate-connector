@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "currentStateVersion": {
+            "type": "string"
+        },
+        "stateKey": {
+            "required": true,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "This is a JSON template for a requests which update app state",
+            "properties": {
+                "data": {
+                    "description": "The new app state data that your application is trying to update with.",
+                    "type": "string"
+                },
+                "kind": {
+                    "default": "appstate#updateRequest",
+                    "description": "Uniquely identifies the type of this resource. Value is always the fixed string appstate#updateRequest.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
